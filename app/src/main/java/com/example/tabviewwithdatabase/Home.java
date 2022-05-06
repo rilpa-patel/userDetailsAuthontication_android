@@ -6,7 +6,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
-
+//commit
 public class Home extends AppCompatActivity {
 
     TabLayout tabLayout;

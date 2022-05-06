@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".update_Activity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+        <RelativeLayout
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fill it"
+                android:textAlignment="center"
+                android:textSize="35dp"
+                android:textColor="@color/design_default_color_primary_dark"
+                android:textStyle="bold"
+                android:fontFamily="cursive"
+                android:layout_margin="9dp"
+                android:id="@+id/tvsignup"></TextView>
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvsignup"
+                android:hint="Enter Name Of Student"
+                android:minHeight="48dp"
+                android:textAlignment="center"
+                android:layout_margin="6dp"
+                android:inputType="text"
+                ></EditText>
+
+            <EditText
+                android:id="@+id/Address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name"
+                android:layout_margin="6dp"
+                android:inputType="textPostalAddress"
+                android:hint="Enter Your Address"
+                android:minHeight="48dp"
+                android:textAlignment="center"
+                ></EditText>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Address"
+                android:id="@+id/date"
+                android:layout_margin="6dp"
+                android:stretchColumns="0"
+                android:minHeight="48dp"
+                >
+                <TableRow>
+                    <EditText
+                        android:hint="Select the date:"
+                        android:minHeight="48dp"
+                        android:textAlignment="center"
+                        android:textSize="20dp"
+                        android:id="@+id/txtdate"></EditText>
+                    <Button
+
+                        android:id="@+id/btndate"
+                        android:text="select Date"
+                        android:textStyle="bold"
+                        android:fontFamily="cursive"
+                        android:layout_alignParentRight="true"
+                        android:textSize="10dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:textColor="@color/design_default_color_primary_dark"
+                        android:paddingTop="0dp"
+                        android:onClick="Date"></Button>
+
+
+                </TableRow>
+            </TableLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Your Weak Subject."
+                android:layout_below="@id/date"
+                android:id="@+id/weaktxt"
+                android:layout_margin="6dp"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                ></TextView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/weakSbj"
+                android:layout_below="@+id/weaktxt"
+                android:gravity="center"
+                android:layout_margin="6dp"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/maths"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Maths"
+                    />
+
+                <CheckBox
+                    android:id="@+id/science"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Science"
+                    />
+
+                <CheckBox
+                    android:id="@+id/gujarati"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Gujarati"
+                    />
+                <CheckBox
+                    android:id="@+id/english"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="English"
+                    />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Your Weak Subject."
+                android:layout_below="@id/weakSbj"
+                android:id="@+id/txtStrong"
+                android:layout_margin="6dp"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                ></TextView>
+
+
+
+
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/txtStrong"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="6dp"
+                android:id="@+id/StrongSbj">
+
+                <RadioButton
+
+                    android:id="@+id/Rmaths"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Maths"
+                    android:layout_gravity="center"
+                    android:checked="true"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/Rscience"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="science"
+                    android:textSize="15dp" />
+                <RadioButton
+                    android:id="@+id/Rgujarati"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gujarati"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/Renglish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="English"
+                    android:textSize="15dp" />
+            </RadioGroup>
+
+
+
+
+            <!--        <DatePicker-->
+            <!--            android:id="@+id/date"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_below="@id/Address"-->
+            <!--            android:layout_centerHorizontal="true"-->
+            <!--            android:hint="Enter Your Name"-->
+            <!--            android:minHeight="48dp"-->
+            <!--            android:textAlignment="center"-->
+            <!--            ></DatePicker>-->
+
+            <EditText
+                android:id="@+id/Income"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/StrongSbj"
+                android:inputType="number"
+                android:hint="Enter Your Family Annual Income"
+                android:minHeight="48dp"
+                android:textAlignment="center"
+                android:layout_margin="6dp"
+                ></EditText>
+
+            <EditText
+                android:id="@+id/Achievement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Income"
+                android:inputType="text"
+                android:hint="Enter Your Achievement"
+                android:minHeight="48dp"
+                android:textAlignment="center"
+                android:layout_margin="6dp"
+                ></EditText>
+
+            <Button
+                android:id="@+id/update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Achievement"
+                android:layout_alignParentLeft="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:fontFamily="cursive"
+                android:paddingTop="0dp"
+                android:text="Update"
+                android:textColor="@color/design_default_color_primary_dark"
+                android:textSize="10dp"
+                android:layout_margin="6dp"
+                android:onClick="Update"
+                android:textStyle="bold"></Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/home"
+                android:layout_below="@+id/Achievement"
+                android:text="Home"
+                android:layout_margin="6dp"
+                android:fontFamily="cursive"
+                android:layout_alignParentRight="true"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:background="?android:attr/selectableItemBackground"
+                android:textColor="@color/design_default_color_primary_dark"
+                android:paddingTop="0dp"
+                android:onClick="Home"></Button>
+
+            <Button
+                android:id="@+id/previous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/home"
+                android:layout_alignParentLeft="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:fontFamily="cursive"
+                android:paddingTop="0dp"
+                android:text="previous"
+                android:textColor="@color/design_default_color_primary_dark"
+                android:textSize="10dp"
+                android:layout_margin="6dp"
+                android:onClick="previous"
+                android:textStyle="bold"></Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/next"
+                android:layout_below="@+id/home"
+                android:text="Next"
+                android:layout_margin="6dp"
+                android:fontFamily="cursive"
+                android:layout_alignParentRight="true"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:background="?android:attr/selectableItemBackground"
+                android:textColor="@color/design_default_color_primary_dark"
+                android:paddingTop="0dp"
+                android:onClick="next"></Button>
+
+            <Button
+                android:id="@+id/first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/previous"
+                android:layout_alignParentLeft="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:fontFamily="cursive"
+                android:paddingTop="0dp"
+                android:text="First"
+                android:textColor="@color/design_default_color_primary_dark"
+                android:textSize="10dp"
+                android:layout_margin="6dp"
+                android:onClick="first"
+                android:textStyle="bold"></Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/last"
+                android:layout_below="@+id/previous"
+                android:text="Last"
+                android:layout_margin="6dp"
+                android:fontFamily="cursive"
+                android:layout_alignParentRight="true"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:background="?android:attr/selectableItemBackground"
+                android:textColor="@color/design_default_color_primary_dark"
+                android:paddingTop="0dp"
+                android:onClick="last"></Button>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
